@@ -1,0 +1,84 @@
+/*EJERCICIO 1*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+.title {
+	font-family: "Montserrat";
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 1px;
+}
+
+h1 {
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	color: transparent; /*Muestra letras y efecto*/
+	-webkit-background-clip: text; /*Muestra las letras, sino sólo queda el gif*/
+	font-size: 120px;
+	line-height: .75; /*Disminuye el interlineado*/
+}
+/*EJERCICIO2 */
+  .reversible, .reversible1 {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	padding-top: 50px;
+	transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 2s ease; /*Muestran a verso*/
+	-webkit-transition: transform 2s ease; /*Muestran a verso*/
+	transition: transform 2s ease;
+  }
+  
+  div.reversible:hover {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+  }
+  div.reversible1:hover{
+	-webkit-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+  }
+  
+  .reversible div, .reversible1 div  {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+  }
+  .cara {
+	background-color: gold;
+  }
+  
+  .verso {
+	background-color: black;
+	color: #aaa;
+	transform: rotateY( 180deg); /*Muestra la otra cara*/
+  }
+/*EJERCICIO 3*/
+.square{
+	background:palevioletred;
+	display: inline-block; /*Lo muestra horizontalmente*/
+	height: 80px;
+	margin-left:  350px;
+	margin-top:  100px;
+	width: 80px;
+	-webkit-transition-duration: 1s; /*Hace que la transición se demore 1s*/	
+}
+
+/* ESTILO HOVER EJECICIO 3 */
+#container:hover .square1{
+	background:indianred;
+	transform: rotate(30deg);
+}
+
+#container:hover .square2{
+	background: blueviolet;
+	transform: rotate(50deg);
+}
+
+#container:hover .square3{
+	background: indigo;
+	transform: rotate(70deg);
+}
